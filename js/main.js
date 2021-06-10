@@ -20,12 +20,11 @@ fetch('test.json')
           });
 
           //Вставляем в форму инпуты и кнопку с необходимыми атрибутами
-          newForm.innerHTML += `<${formElements.element} id="${formElements.id}" type="${formElements.type}" placeholder="${formElements.name}" style="${styles}">${formElements.text}<br>`;
+          newForm.innerHTML += `<${formElements.element} id="${formElements.id}" type="${formElements.type}" placeholder="${formElements.title}" style="${styles}">${formElements.text}<br>`;
         });
 
         // Размещаем созданный элемент form после тега с id = "form"
         document.getElementById('form').prepend(newForm);
-
     }
     
     createForm(formHTML);
@@ -33,9 +32,3 @@ fetch('test.json')
   .catch(function(err) {
     console.log(err)
   })
-
-  
-
-
-
-
